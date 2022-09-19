@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+/* *************Root Styel***************** */
+
+/* Box sizing rules */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set core body defaults */
+
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Make images easier to work with */
+
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* *********Variable********* */
+
+:root { 
+
+--Dark-cyan:            hsl(158, 36%, 37%);
+--Cream:                hsl(30, 38%, 92%);
+--Very-dark-blue:       hsl(212, 21%, 14%);
+--Dark-grayish-blue:    hsl(228, 12%, 48%);
+--White:                hsl(0, 0%, 100%);
+
+}
+
+/* ************Custom CSS************* */
+
+body {
+    background: var(--Cream);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1 {
+    color: var(--Very-dark-blue);
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    padding-right: 50px;
+}
+
+h2 {
+    color: var(--Dark-cyan);
+    font-size: 2rem;
+    font-weight: 700;
+    margin-right: 30px;
+}
+
+h4 {
+    letter-spacing: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    font-family: 'Fraunces', serif;
+}
+
+h4, p{
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+
+.flex {
+   display: flex; 
+}
+
+.center {
+    align-items: center;
+}
+
+.main {
+    background-color: var(--White);
+    border-radius: 10px;
+    box-shadow: -2px 15px 30px 2px rgba(0, 0, 0, 0.096);
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    max-width: 650px;
+}
+
+.section1 {
+    margin-right: 30px;
+}
+
+.section1-img1 {
+    border-radius: 10px 0 0 10px;
+}
+
+.section1-img2 {
+    display: none;
+}
+
+.section2 {
+    max-width: 300px;
+}
+
+.section2-datil {
+    padding-right: 30px;
+    margin-bottom: 20px;
+}
+
+.section2-div {
+    flex-direction: row;
+}
+
+
+.section2-div p {
+    text-decoration: line-through;
+   
+}
+
+.button {
+    background-color: var(--Dark-cyan);
+    border-style: none;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px 1px rgba(0, 0, 0, 0.089);
+    color: var(--White);
+    font-weight: 600;
+    font-size: .95rem;
+    padding: 20px 80px;
+    margin-top: 25px;
+}
+
+.button img {
+    margin-right: 10px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+.button:active {
+    background-color: hsl(157, 74%, 15%);
+}
+
+@media(max-width: 700px) {
+    
+    h4 {
+        font-size: .8rem;
+        letter-spacing: 5px;
+        margin-bottom: 10px;
+    }
+    
+    h1 {
+        font-size: 1.57rem;
+        line-height: 1;
+        margin-bottom: 15px;
+        padding-right: 0;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    p {
+        font-size: .781rem;
+    }
+
+    .main {
+        flex-direction: column;
+        max-width: 300px;
+    }
+
+    .section1 {
+        margin: 0;
+    }
+
+    .section1-img1 {
+        display: none;
+    }
+
+    .section1-img2 {
+        border-radius: 10px 10px 0 0;
+        display: block;
+    }
+
+    .section2 {
+        margin: 20px 20px 20px 20px;
+    }
+
+    .section2-datil {
+        padding-right: 0px;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        border-radius: 8px;
+        padding: 12px 70px;
+        margin-top: 10px;
+    }
+}
